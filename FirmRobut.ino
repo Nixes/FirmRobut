@@ -72,9 +72,7 @@ void setController (int motor_a, int motor_b) {
   // send to controller
   analogWrite(pin_a_speed, motor_a_speed);
   analogWrite(pin_b_speed, motor_b_speed);
-  Serial.write("pin a: ");Serial.print(motor_a_dir);
   digitalWrite(pin_a_dir, motor_a_dir);
-  Serial.write("pin b: ");Serial.print(motor_b_dir);
   digitalWrite(pin_b_dir, motor_b_dir);
 
 }

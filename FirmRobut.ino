@@ -8,8 +8,8 @@ const char* password = "";
 const char* custom_hostname = "esp-robut";
 WiFiUDP server;
 
-// number of milliseconds to wait before stopping motors
-const unsigned int packet_timeout = 1000;
+// number of milliseconds to wait without a command before stopping motors
+const unsigned int packet_timeout = 250;
 
 unsigned long last_packet; // what the time was when the last packet was received
 
@@ -30,7 +30,7 @@ const int pin_b_dir = 2;
 const int pin_led = 2;
 
 
-// set everything to resonable defaults
+// set everything to reasonable defaults
 void resetController() {
   analogWrite(pin_a_speed, 0);
   analogWrite(pin_b_speed, 0);
